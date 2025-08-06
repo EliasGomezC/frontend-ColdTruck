@@ -1,0 +1,11 @@
+import { Brand } from './Brand'
+
+export interface Model {
+    _id: number
+    name: string
+    IDBrand: number
+}
+
+export interface BrandWithModels extends Brand {
+    models: Model[]
+}
