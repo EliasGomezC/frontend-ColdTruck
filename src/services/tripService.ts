@@ -1,11 +1,26 @@
+import type { AlertInfo, Trip, TripsForCargoType, TripsForRute, TripsForStatus } from '../types'
 import apiLocalHost from './apiLocalHost'
-import type { Trip, AlertInfo } from '../types'
 
 const BASE_URL = '/trips'
 const SPECIFIC_URL = '/trips/specific'
 
 export const getTrips = async (): Promise<Trip[]> => {
     const { data } = await apiLocalHost.get<Trip[]>(SPECIFIC_URL)
+    return data
+}
+
+export const getTripsForCargoType = async (): Promise<TripsForCargoType[]> => {
+    const { data } = await apiLocalHost.get<TripsForCargoType[]>('/trips/ForCargoType')
+    return data
+}
+
+export const getTripsForRute = async (): Promise<TripsForRute[]> => {
+    const { data } = await apiLocalHost.get<TripsForRute[]>('/trips/ForRute')
+    return data
+}
+
+export const getTripsForStatus = async (): Promise<TripsForStatus[]> => {
+    const { data } = await apiLocalHost.get<TripsForStatus[]>('/trips/ForStatus')
     return data
 }
 

@@ -13,6 +13,7 @@ import { Box } from "../../../types/Box"
 import { CargoType } from "../../../types/CargoType"
 import CreateRuteModal from "../Rute/CreateRuteModal"
 import CreateTripModal from "./CreateTripModal"
+import InfoTrips from "./InfoTrip"
 import ModalMoreTrip from "./ModalMoreTrip"
 
 const TripManagement: React.FC = () => {
@@ -31,6 +32,7 @@ const TripManagement: React.FC = () => {
   const [showRuteModal, setShowRuteModal] = useState(false)
   const [showTripModal, setShowTripModal] = useState(false)
   const [showModalMore, setShowModalMore] = useState(false)
+  const [showModalInfo, setShowModalInfo] = useState(false)
 
   // Search and filter states
   const [searchTerm, setSearchTerm] = useState("")
@@ -168,14 +170,14 @@ useEffect(() => {
         {/* Header Section */}
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-            <div className="space-y-2">
+            <div className="cursor-pointer p-4 rounded-xl duration-500 hover:bg-blue-200 text-slate-900" onClick={ () => setShowModalInfo(true)}>
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-blue-600 rounded-xl">
                   <Route className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-4xl font-bold text-slate-900">Trip Management</h1>
+                <h1 className="text-4xl font-bold">Trip Management</h1>
               </div>
-              <div className="flex items-center gap-4 text-slate-600">
+              <div className="flex items-center gap-4 mt-1">
                 <div className="flex items-center gap-2">
                   <span className="text-sm">Total trips:</span>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
@@ -493,6 +495,11 @@ useEffect(() => {
                   onUpdated={loadData}
                 />
               )}
+
+                <InfoTrips
+                  isOpen={showModalInfo}
+                  onClose={() => setShowModalInfo(false)}
+                />
             </div>
           )}
         </div>

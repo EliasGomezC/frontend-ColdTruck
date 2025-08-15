@@ -28,3 +28,18 @@ export interface Trip {
     IDCargoType: number | CargoType
     alerts?: AlertInfo[]
 }
+
+export interface TripsForCargoType {
+    _id: string
+    totalTrips: number
+}
+
+export interface TripsForRute {
+    NombreDeLaRuta: string
+    totalDeViajes: number
+}
+
+export interface TripsForStatus {
+    _id: string
+    total: number
+}
