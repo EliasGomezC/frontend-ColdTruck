@@ -45,7 +45,7 @@ const LandingPage = () => {
                 </div>
             </header>
             <main>
-                <section className="flex-col justify-center items-center p-16 lg:p-24 lg:flex lg:flex-row lg:justify-between w-full bg-[#0f172a] relative">
+                <section className="flex-col justify-center items-center p-5 lg:p-24 lg:flex lg:flex-row lg:justify-between w-full bg-[#0f172a] relative">
                     <div
                         className="absolute inset-0"
                         style={{
@@ -72,9 +72,9 @@ const LandingPage = () => {
                         alt="Blue Peterbilt Truck"
                     />
                 </section>
-                <section className="p-16 lg:p-24 z-10" id='Features'>
+                <section className="p-5 lg:p-24 z-10" id='Features'>
                     <div className="flex justify-center">
-                        <h2 className="text-4xl z-10 font-extrabold" >System Features</h2>
+                        <h2 className="text-4xl z-10 font-extrabold text-center" >System Features</h2>
                     </div>
                     <div className="flex justify-center mb-5">
                         <p className="text-xl text-gray-600 z-10 text-center">The system has specific characteristics that make our system functional, the main ones are</p>
@@ -148,7 +148,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className="flex-col justify-center items-center p-16 lg:p-24 lg:flex lg:flex-row lg:justify-between w-full bg-[#0f172a] relative mt-10" id='AboutUs'>
+                <section className="flex-col justify-center items-center p-5 lg:p-24 lg:flex lg:flex-row lg:justify-between w-full bg-[#0f172a] relative mt-10" id='AboutUs'>
                     <div
                         className="absolute inset-0"
                         style={{
@@ -174,7 +174,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className='p-16 lg:p-24 z-10' id='ContactUs'>
+                <section className='p-5 lg:p-24 z-10' id='ContactUs'>
                     <div className='flex justify-center items-center'>
                         <h3 className="text-4xl font-extrabold">Contact Us</h3>
                     </div>
